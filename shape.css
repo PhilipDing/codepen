@@ -1,0 +1,98 @@
+/* library: http://simurai.com/archive/buttons/ */
+
+
+.circle {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: LightPink;
+    border-radius: 50%;
+}
+
+.ellipse {
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    background: Pink;
+    border-radius: 50%;
+}
+
+.quarter-ellipse {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: LavenderBlush;
+    border-radius: 50%/100% 100% 0 0;
+}
+
+.quarter-ellipse1 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: Crimson;
+    border-radius: 100% 0 0 100%/50%;
+}
+
+.quarter-ellipse2 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: PaleVioletRed;
+    border-radius: 0 100% 100% 0/50%;
+}
+
+.quarter-ellipse3 {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    background: HotPink;
+    border-radius: 50%/0 0 100% 100%;
+}
+
+.quarter-ellipse4 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: DeepPink;
+    border-radius: 100% 0 0 0;
+}
+
+.traingle {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    border-bottom: 100px solid MediumVioletRed;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.parallelograms {
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+
+}
+.parallelograms:before {
+    content: '';
+    z-index: -1; /* 不遮盖宿主元素的内容 */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: Orchid;
+    transform: skew(-45deg); /* 使用伪元素，避免宿主元素内容发生skew */
+}
+
+
+.notching {
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(135deg, transparent 15px, yellowgreen 0) top left,
+        linear-gradient(-135deg, transparent 15px, yellowgreen 0) top right,
+        linear-gradient(-45deg, transparent 15px, yellowgreen 0) bottom right,
+        linear-gradient(45deg, transparent 15px, yellowgreen 0) bottom left;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
