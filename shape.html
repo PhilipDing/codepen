@@ -5,49 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
-        html, body {
-            margin: 0;
-            padding: 0;
-        }
         body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            text-align: center;
+        }
+        table {
+            border-spacing: 0;
+            margin: 0 auto;
         }
         div {
             margin: 10px;
         }
-        span {
-
-            margin: 0 10px;
+        td {
+            border: 1px solid #E5E5E5;
+            padding: 10px;
+        }
+        td:first-child {
+            font-size: 16px;
+            text-align: left;
+            font-weight: bold;
+            white-space: nowrap;
         }
     </style>
-    <link rel="stylesheet" href="shape.css">
+    <link rel="stylesheet" href="css/shape.css">
     <title>Shape</title>
 </head>
 <body>
-    <h3>圆形</h3>
-    <div class="circle"></div>
+    <h1>Shape</h1>
 
-    <h3>椭圆</h3>
-    <div class="ellipse"></div>
+    <table>
+        <tr>
+            <td>圆形</td>
+            <td>
+                <div class="circle"></div>
+            </td>
+        </tr>
 
-    <h3>半圆</h3>
-    <div>
-        <span class="quarter-ellipse"></span>
-        <span class="quarter-ellipse1"></span>
-        <span class="quarter-ellipse2"></span>
-        <span class="quarter-ellipse3"></span>
-        <span class="quarter-ellipse4"></span>
-    </div>
+        <tr>
+            <td>椭圆</td>
+            <td>
+                <div class="ellipse"></div>
+            </td>
+        </tr>
 
-    <h3>三角形</h3>
-    <div class="traingle"></div>
+        <tr>
+            <td>半圆</td>
+            <td>
+                <div class="quarter-ellipse"></div>
+                <div class="quarter-ellipse1"></div>
+                <div class="quarter-ellipse2"></div>
+                <div class="quarter-ellipse3"></div>
+                <div class="quarter-ellipse4"></div>
+            </td>
+        </tr>
 
-    <h3>平行四边形</h3>
-    <div class="parallelograms"></div>
+        <tr>
+            <td>三角形</td>
+            <td>
+                <div class="traingle"></div>
+            </td>
+        </tr>
 
-    <h3>切角</h3>
-    <div class="notching"></div>
+
+        <tr>
+            <td>平行四边形</td>
+            <td>
+                <div class="parallelograms"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>切角</td>
+            <td>
+                <div class="notching"></div>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

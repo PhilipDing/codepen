@@ -1,6 +1,5 @@
 /* library: http://simurai.com/archive/buttons/ */
 
-
 .circle {
     display: inline-block;
     height: 100px;
@@ -85,8 +84,8 @@
     transform: skew(-45deg); /* 使用伪元素，避免宿主元素内容发生skew */
 }
 
-
 .notching {
+    display: inline-block;
     height: 100px;
     width: 100px;
     background: linear-gradient(135deg, transparent 15px, yellowgreen 0) top left,
