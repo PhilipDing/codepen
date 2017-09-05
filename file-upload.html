@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Upload</title>
+</head>
+
+<body>
+    <input type="file" id="files" multiple>
+    <img id="preview" style="display: block;margin-top: 20px;">
+
+    <script>
+        var elem = document.getElementById('files'),
+            img = document.getElementById('preview');
+
+        elem.onchange = function (event) {
+            var files = event.target.files,
+                reader = new FileReader();
+
+            if (files && files[0]) {
+                reader.onload = function (ev) {
+                    img.src = ev.target.result;
+                }
+                reader.readAsDataURL(files[0]);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

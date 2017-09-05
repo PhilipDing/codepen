@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hex to RGBA()</title>
+</head>
+
+<body>
+    <input type="text" id="input">
+    <input type="button" onclick="convert()" value="Convert">
+    <span id="result" style="margin-left:50px;"></span>
+
+    <script>
+        function hexToRgbA(hex) {
+            var c;
+            if (/^#([A-Fa-f0-9]{3}){1,2}$/.test(hex)) {
+                c = hex.substring(1).split('');
+                if (c.length == 3) {
+                    c = [c[0], c[0], c[1], c[1], c[2], c[2]];
+                }
+                c = '0x' + c.join('');
+                return 'rgba(' + [(c >> 16) & 255, (c >> 8) & 255, c & 255].join(', ') + ', 1)';
+            }
+            throw new Error('Bad Hex');
+        }
+
+        var input = document.getElementById('input'),
+            result = document.getElementById('result');
+
+        function convert() {
+            result.innerHTML = hexToRgbA(input.value);
+        }
+    </script>
+</body>
+
+</html>
