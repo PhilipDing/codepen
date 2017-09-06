@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Twinkling starts</title>
-    <link rel="stylesheet" href="css/twinkle.css">
+    <link rel="stylesheet/less" type="text/css" href="css/twinkle.less">
 </head>
 
 <body>
     <div class="sky"></div>
 
-    <script src="libs/jquery.js"></script>
+    <script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/less.js/3.0.0-pre.4/less.min.js"></script>
 
     <script>
-        var amount = 15;
+        var amount = 10;
         var $sky = $('.sky');
 
         for (var i = 0; i < amount; i++) {
@@ -23,7 +24,7 @@
             $star.css({
                 'top': Math.random() * 100 + '%',
                 'left': Math.random() * 100 + '%',
-                'animation': 'blink 15s infinite ' + Math.random() * 8 + 's ease-out',
+                'animation': 'blink 5s infinite ' + Math.random() * 8 + 's ease-out',
                 'opacity': Math.random() * 5 / 10 + 0.5
             });
             $sky.append($star);
