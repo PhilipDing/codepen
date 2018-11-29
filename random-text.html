@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Text</title>
+    <style>
+        body {
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+            }
+
+            var list = ["富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善"];
+            var index = getRandomInt(0, list.length)
+
+            $(document.body).click(function (e) {
+                var $i = $("<span></span>").text(list[index]);
+                var x = e.pageX, y = e.pageY;
+                $i.css({
+                    "z-index": 999,
+                    "top": y - 20,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "color": "#ff6651",
+                    "user-select": "none"
+                });
+                $(document.body).append($i);
+                $i.animate({
+                    "top": y - 180,
+                    "opacity": 0
+                }, 1500, function () {
+                    $i.remove();
+                });
+
+                index = getRandomInt(0, list.length);
+            });
+        });
+    </script>
+</body>
+</html>
